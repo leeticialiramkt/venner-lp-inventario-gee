@@ -122,6 +122,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .header-phone{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13.5px;font-weight:600;margin-right:18px;}
   }
 
+  /* ---------- Urgency bar (prazo Cetesb) ---------- */
+  .urgency-bar{
+    background:linear-gradient(90deg,var(--amber),#f0b13d);
+    color:#3E2900;
+    text-align:center;
+    position:relative;z-index:60;
+  }
+  .urgency-bar .container{
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+    padding:10px 24px;
+  }
+  .urgency-bar p{font-size:13.5px;font-weight:700;margin:0;}
+  .urgency-bar strong{font-weight:800;}
+  .urgency-bar a{
+    text-decoration:underline;text-underline-offset:3px;white-space:nowrap;font-size:13.5px;font-weight:800;
+  }
+  @media(max-width:640px){
+    .urgency-bar p{font-size:12.5px;}
+    .urgency-bar a{font-size:12.5px;}
+  }
+
+  /* ---------- Deadline alert card ---------- */
+  .deadline-alert{
+    display:flex;gap:18px;align-items:flex-start;
+    background:linear-gradient(135deg,#FFF6E6,#FFEFD1);
+    border:1.5px solid rgba(232,160,32,0.45);
+    border-left:5px solid var(--amber);
+    border-radius:var(--radius);
+    padding:22px 26px;margin-bottom:36px;
+    box-shadow:var(--shadow-sm);
+  }
+  .deadline-alert .icon-wrap{
+    flex-shrink:0;width:46px;height:46px;border-radius:12px;
+    background:var(--amber);color:#3E2900;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .deadline-alert .icon-wrap svg{width:24px;height:24px;}
+  .deadline-alert h3{font-size:18.5px;margin-bottom:6px;color:var(--dark-green);}
+  .deadline-alert p{color:var(--text);font-size:14.5px;}
+  .deadline-alert p + p{margin-top:6px;}
+  @media(max-width:640px){
+    .deadline-alert{flex-direction:column;padding:18px 20px;}
+  }
+
   /* ---------- Hero ---------- */
   .hero{
     position:relative;
@@ -369,6 +413,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div class="urgency-bar">
+  <div class="container">
+    <p>&#9203; <strong>Prazo Cetesb 2026:</strong> o Inventário de GEE deve ser enviado até <strong>31 de outubro</strong>. Empresas que emitem +20.000&nbsp;t/ano de CO&#8322;e (Escopo 1) agora também são obrigadas.</p>
+    <a href="#form">Verificar se minha empresa se enquadra &rarr;</a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container header-inner">
     <a href="#top" class="header-logo" aria-label="Venner Ambiental - página inicial">
@@ -391,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-blob blob-2"></div>
     <div class="container hero-grid">
       <div class="hero-copy reveal is-visible">
-        <span class="kicker">Gestão de Emissões Atmosféricas</span>
+        <span class="kicker">Inventário de GEE &middot; Prazo Cetesb: 31/10</span>
         <h1>Sua empresa está exposta a <em>multas ambientais</em> sem saber?</h1>
         <p class="lede">Faça o Inventário de Gases de Efeito Estufa (GEE) com quem tem 13 anos de experiência em engenharia ambiental — e saia com um diagnóstico claro, alinhado ao GHG Protocol e à ISO 14064.</p>
         <ul class="trust-list">
@@ -400,6 +451,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Atendimento para indústrias e empresas de todo o Brasil</li>
         </ul>
         <div class="hero-badges">
+          <span class="hero-badge" style="background:rgba(232,160,32,0.24);border-color:rgba(232,160,32,0.55);color:#FFE7B3;">Prazo Cetesb: 31/10/2026</span>
           <span class="hero-badge">13 anos de experiência</span>
           <span class="hero-badge">GHG Protocol</span>
           <span class="hero-badge">ISO 14064</span>
@@ -468,6 +520,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="kicker">O risco de não ter um inventário</span>
         <h2>Sem o Inventário de GEE, sua empresa fica exposta em três frentes</h2>
         <p>Cada vez mais, ele deixa de ser "algo bom de ter" e passa a ser pré-requisito.</p>
+      </div>
+      <div class="deadline-alert reveal">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div>
+          <h3>Emite mais de 20.000 t/ano de CO&#8322;e? O envio à Cetesb pode já ser obrigatório para sua empresa</h3>
+          <p>A Decisão de Diretoria Cetesb nº 083/2024/A ampliou a obrigatoriedade do Inventário de GEE: além dos setores tradicionalmente listados (cimento, petroquímica, siderurgia, aterros, entre outros), qualquer empreendimento que emita acima de 20.000 t/ano de CO&#8322;e no Escopo 1 também precisa reportar.</p>
+          <p>O prazo de envio é sempre entre 1º de setembro e 31 de outubro, referente ao ano-base anterior — ou seja, o prazo deste ano se encerra em <strong>31/10</strong>.</p>
+        </div>
       </div>
       <div class="grid-3">
         <div class="card reveal reveal-delay-1">
@@ -599,6 +659,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="faq-list reveal">
         <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Qual é o prazo para enviar o Inventário de GEE à Cetesb? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p>Conforme a Decisão de Diretoria Cetesb nº 083/2024/A, as declarações devem ser enviadas todo ano entre 1º de setembro e 31 de outubro, referentes às emissões do ano anterior. O prazo deste ano se encerra em <strong>31/10</strong>. Empresas que nunca fizeram o inventário — ou que só agora descobriram que se enquadram no critério de +20.000 t/ano de CO&#8322;e — precisam se organizar rápido.</p></div>
+        </div>
+        <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Minha empresa é obrigada a fazer o Inventário de GEE? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
           <div class="faq-a"><p>Depende do setor, porte e das exigências dos órgãos ambientais, clientes e editais em que sua empresa participa. Mesmo quando não é obrigatório, o inventário é cada vez mais exigido em processos de contratação B2B e programas ESG. No diagnóstico gratuito, avaliamos o seu caso específico.</p></div>
         </div>
@@ -621,8 +685,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ================= CTA FINAL ================= -->
   <section class="final-cta">
     <div class="container reveal">
-      <h2>Não espere uma multa para agir</h2>
-      <p>Fale com um especialista da Venner Ambiental agora e descubra em minutos se a sua empresa está exposta.</p>
+      <h2>O prazo da Cetesb é 31/10 &mdash; não espere a multa chegar para agir</h2>
+      <p>Fale com um especialista da Venner Ambiental agora e descubra em minutos se a sua empresa está no prazo e se precisa fazer o inventário.</p>
       <a href="#form" class="btn btn-primary">
         Quero meu diagnóstico gratuito
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
